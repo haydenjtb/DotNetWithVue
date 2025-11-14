@@ -9,7 +9,3 @@ To use this code in production,
 ```zsh
 npm install && npm run build
 ```
-
-
-```
-```
