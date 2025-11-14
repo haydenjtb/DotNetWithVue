@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using Newtonsoft.Json;
+@{
+    var Name = "Hayden";
+    var VueUsableName = JsonConvert.SerializeObject(Name);
+}
+
+<script defer src="lib/jtb-vue/jtb-vue-main.es.js"></script>
+<div id="home" v-data-name="@Name">
+    <p>
+        If you are seeing this, you have not built the Vue project. Go to<br/>
+        <code style="background: darkslategray;color: whitesmoke; padding: 8px;border-radius: 6px;">wwwroot/vue</code><br/>
+        and run<br/>
+        <code style="background: darkslategray;color: whitesmoke; padding: 8px; border-radius: 6px;">npm install && npm run build</code><br/>
+    </p>
+</div>
