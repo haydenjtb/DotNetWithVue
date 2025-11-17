@@ -1,15 +1,16 @@
-<script setup>
-import {ref, useAttrs} from "vue";
+<script setup lang="ts">
+import {ref, useAttrs, type SetupContext} from "vue";
 import HelloWorld from "./components/HelloWorld.vue";
 import AppRouter from "./components/AppRouter.vue";
 import Layout from "./Layout.vue";
 
-const data = useAttrs().data();
+const attributes: SetupContext["attrs"] = useAttrs();
+const data: {page: string, name: string} = typeof attributes.data === "function" && attributes.data();
 
 const name = ref(data.name);
 const page = ref(data.page);
 
-const updateName = (newName) => {
+const updateName = (newName: string) => {
   name.value = newName;
 }
 </script>

@@ -28,4 +28,4 @@ The majority of files would be Async Components, which means they are only loade
 but only when the user goes to the correct page.
 
 ## ToDos:
-- [ ] Add TypeScript integration
+- [x] Add TypeScript integration
