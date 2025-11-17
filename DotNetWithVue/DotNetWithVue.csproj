@@ -41,6 +41,7 @@
 
     <ItemGroup>
       <TypeScriptCompile Include="wwwroot\vue\src\main.ts" />
+      <TypeScriptCompile Include="wwwroot\vue\vite.config.ts" />
     </ItemGroup>
 
 </Project>

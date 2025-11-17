@@ -9,8 +9,6 @@ const props = defineProps({
   }
 })
 
-console.log(props.page);
-
 const AboutView = defineAsyncComponent(() => import('../pages/AboutView.vue'))
 const HomeView = defineAsyncComponent(() => import('../pages/HomeView.vue'))
 </script>
