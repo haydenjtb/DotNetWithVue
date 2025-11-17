@@ -1,13 +1,14 @@
 import './style.css'
-import HomeView from "./components/HomeView.vue";
+import App from './App.vue';
 import { createApp } from 'vue'
 
-const home = createApp(HomeView, {
+const home = createApp(App, {
     data: function() {
         return {
-            name: document.querySelector("#home").getAttribute("v-data-name")
+            name: document.querySelector("#app").getAttribute("v-data-name"),
+            page: document.querySelector("#app").getAttribute("v-data-page"),
         }
     },
 })
 
-home.mount("#home")
+home.mount("#app")

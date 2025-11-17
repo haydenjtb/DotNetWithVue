@@ -13,14 +13,19 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public class ViewModel
     {
-        return View();
+        public string page = "";
+        public string name = "Hayden";
     }
 
-    public IActionResult DealerList()
+    public IActionResult Index()
     {
-        return View();
+        ViewModel model = new ViewModel()
+        {
+            page = "home",
+        };
+        return View(model);
     }
 
     public IActionResult Privacy()
