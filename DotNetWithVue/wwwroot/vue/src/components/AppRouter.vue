@@ -6,8 +6,13 @@ const props = defineProps({
   page: {
     type: String,
     default: 'home'
+  },
+  model: {
+    type: Object
   }
 })
+
+console.log(props.model);
 
 const AboutView = defineAsyncComponent(() => import('../pages/AboutView.vue'))
 const HomeView = defineAsyncComponent(() => import('../pages/HomeView.vue'))

@@ -5,10 +5,11 @@ import AppRouter from "./components/AppRouter.vue";
 import Layout from "./Layout.vue";
 
 const attributes: SetupContext["attrs"] = useAttrs();
-const data: {page: string, name: string} = typeof attributes.data === "function" && attributes.data();
+const data: {page: string, name: string, model: string} = typeof attributes.data === "function" && attributes.data();
 
 const name = ref(data.name);
 const page = ref(data.page);
+const model = ref(JSON.parse(data.model));
 
 const updateName = (newName: string) => {
   name.value = newName;
@@ -19,7 +20,7 @@ const updateName = (newName: string) => {
   <div>
     <Layout>
       <HelloWorld v-if="name !== null" :name @updateName="updateName"/>
-      <AppRouter :page />
+      <AppRouter :page :model />
     </Layout>
   </div>
 </template>

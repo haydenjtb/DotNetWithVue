@@ -7,6 +7,7 @@ const home = createApp(App, {
         return {
             name: document.querySelector("#app")?.getAttribute("v-data-name"),
             page: document.querySelector("#app")?.getAttribute("v-data-page"),
+            model: document.querySelector("#app")?.getAttribute("v-data-model"),
         }
     },
 })
