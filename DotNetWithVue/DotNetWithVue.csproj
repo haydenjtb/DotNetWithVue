@@ -24,7 +24,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Include="wwwroot\vue\.gitignore" />
       <None Include="wwwroot\vue\README.md" />
       <None Include="wwwroot\vue\src\main.js" />
       <None Include="wwwroot\vue\src\style.css" />
