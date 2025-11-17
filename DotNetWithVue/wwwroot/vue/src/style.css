@@ -1,1 +1,17 @@
 @import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+    --text-primary: #000;
+    --bg-primary: #fff;
+    --bg-deep-background: #dbeafe;
+    --border-primary: #000;
+}
+
+.dark {
+    --text-primary: #e5e7eb;
+    --bg-primary: #1d293d;
+    --bg-deep-background: #030712;
+    --border-primary: #99a1af;
+}
