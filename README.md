@@ -26,3 +26,6 @@ App and AppRouter components then take these props and handle the loading approp
 
 The majority of files would be Async Components, which means they are only loaded at run time and not compiled in. This is done to handle so the entire Vue app is not loaded on every single page,
 but only when the user goes to the correct page.
+
+## ToDos:
+- [ ] Add TypeScript integration
